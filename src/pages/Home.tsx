@@ -562,7 +562,7 @@ export const Home: React.FC = () => {
       <section className="relative py-32 px-6 sm:px-8 lg:px-12 text-center bg-[#0C0D0F] border-t border-white/5 overflow-hidden">
         <div className="absolute inset-0 opacity-20 pointer-events-none select-none">
           <img
-            src="/src/assets/images/hero_mountain_lodge_1790368092107.jpg"
+            src="/hero_mountain_lodge_1790368092107.jpg"
             alt="The Grey background"
             className="w-full h-full object-cover filter blur-sm scale-105"
           />
