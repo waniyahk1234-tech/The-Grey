@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --color-charcoal-950: #0C0D0F;
+  --color-charcoal-900: #111215;
+  --color-charcoal-850: #14161A;
+  --color-charcoal-800: #181A1F;
+  --color-charcoal-700: #22252C;
+  --color-charcoal-600: #2F323A;
+  --color-stone-muted: #8E8D8A;
+  --color-ivory: #F5F3EF;
+  --color-ivory-dim: #D4D0C7;
+  --color-accent-brass: #C5A880;
+  --color-accent-brass-hover: #D8BD97;
+}
+
+@layer base {
+  body {
+    background-color: #111215;
+    color: #F5F3EF;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Custom subtle noise texture */
+.bg-noise {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Subtle hairline divider */
+.hairline-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.12), transparent);
+}
+
+/* Elegant scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111215;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #252830;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #373A44;
+}

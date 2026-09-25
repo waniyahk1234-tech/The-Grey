@@ -1,0 +1,6 @@
+{
+  "name": "The Grey · Nathia Gali",
+  "description": "A table in the hills. The Grey is a quiet mountain luxury dining space nestled in the pine hills of Nathia Gali, Pakistan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
