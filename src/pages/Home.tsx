@@ -294,7 +294,7 @@ export const Home: React.FC = () => {
             <div className="lg:col-span-7 relative">
               <div className="border border-white/10 shadow-2xl overflow-hidden">
                 <SafeImage
-                  src="/src/assets/images/lodge_exterior_mist_1790368141854.jpg"
+                  src="/lodge_exterior_mist_1790368141854.jpg"
                   alt="A-frame pavilion of The Grey in thick mountain fog"
                   aspectClass="aspect-[16/10]"
                   className="w-full h-full object-cover"
@@ -420,7 +420,7 @@ export const Home: React.FC = () => {
             <div className="lg:col-span-6">
               <div className="relative border border-white/10 overflow-hidden shadow-2xl">
                 <SafeImage
-                  src="/src/assets/images/culinary_mountain_dish_1790368127851.jpg"
+                  src="/culinary_mountain_dish_1790368127851.jpg"
                   alt="Culinary presentation at The Grey with wild mountain mushrooms"
                   aspectClass="aspect-[4/3]"
                   className="w-full h-full object-cover"
