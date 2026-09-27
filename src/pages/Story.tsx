@@ -28,9 +28,10 @@ export const Story: React.FC = () => {
         {/* Hero Narrative Image */}
         <div className="mb-24 border border-white/10 shadow-2xl overflow-hidden">
           <SafeImage
-            src="/src/assets/images/hero_mountain_lodge_1790368092107.jpg"
+            src="/images/hero_mountain_lodge_1790368092107.webp"
             alt="The Grey lodge illuminated at dusk in Nathia Gali"
             aspectClass="aspect-[21/9]"
+            priority={true}
             className="w-full h-full object-cover"
           />
           <div className="p-4 bg-[#14161A] border-t border-white/5 flex flex-col sm:flex-row sm:items-center justify-between text-xs text-[#8E8D8A] gap-2">
@@ -69,7 +70,7 @@ export const Story: React.FC = () => {
             <div className="md:col-span-6 order-2 md:order-1">
               <div className="border border-white/10 shadow-xl overflow-hidden">
                 <SafeImage
-                  src="/src/assets/images/dining_warm_interior_1790368111714.jpg"
+                  src="/images/dining_warm_interior_1790368111714.webp"
                   alt="Warm interior table at The Grey"
                   aspectClass="aspect-[4/3]"
                 />

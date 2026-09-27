@@ -82,7 +82,7 @@ export const Gallery: React.FC = () => {
 
         {/* Consistent Uniform Card Grid - Clean 4:3 Ratio */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {filteredItems.map((item) => (
+          {filteredItems.map((item, index) => (
             <div
               key={item.id}
               onClick={() => handleOpenPhoto(item)}
@@ -103,6 +103,7 @@ export const Gallery: React.FC = () => {
                   src={item.src}
                   alt={item.alt}
                   aspectClass="aspect-[4/3]"
+                  priority={index < 3}
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
 

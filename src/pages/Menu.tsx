@@ -4,6 +4,7 @@ import { ArrowUpRight, Sparkles } from 'lucide-react';
 import { menuCategories, MenuItem } from '../data/menu';
 import { restaurantData } from '../data/restaurant';
 import { getLiveMenuItems } from '../services/menuStore';
+import { SafeImage } from '../components/SafeImage';
 
 export const Menu: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -76,6 +77,16 @@ export const Menu: React.FC = () => {
               className="p-6 sm:p-8 bg-[#14161A] border border-white/5 hover:border-white/10 transition-colors flex flex-col justify-between group"
             >
               <div>
+                {item.image && (
+                  <div className="mb-4 overflow-hidden border border-white/5">
+                    <SafeImage
+                      src={item.image}
+                      alt={item.name}
+                      aspectClass="aspect-[16/9]"
+                      className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-700 ease-out"
+                    />
+                  </div>
+                )}
                 <div className="flex items-baseline justify-between gap-4 mb-2">
                   <div className="flex items-center gap-2">
                     <h3 className="font-serif text-2xl text-[#F5F3EF] group-hover:text-[#C5A880] transition-colors">

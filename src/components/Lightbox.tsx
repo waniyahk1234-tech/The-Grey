@@ -44,6 +44,21 @@ export const Lightbox: React.FC<LightboxProps> = ({
     };
   }, [isOpen, handleKeyDown]);
 
+  // Preload adjacent images for instantaneous next/prev navigation
+  useEffect(() => {
+    if (!isOpen || items.length === 0) return;
+    const nextIdx = (currentIndex + 1) % items.length;
+    const prevIdx = (currentIndex - 1 + items.length) % items.length;
+    if (items[nextIdx]?.src) {
+      const imgNext = new Image();
+      imgNext.src = items[nextIdx].src;
+    }
+    if (items[prevIdx]?.src) {
+      const imgPrev = new Image();
+      imgPrev.src = items[prevIdx].src;
+    }
+  }, [isOpen, currentIndex, items]);
+
   if (!isOpen || !currentItem) return null;
 
   return (

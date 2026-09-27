@@ -16,6 +16,7 @@ export interface MenuItem {
   price: string;
   dietary?: string[];
   isSignature?: boolean;
+  image?: string;
 }
 
 export const menuCategories = [
@@ -63,6 +64,7 @@ export const sampleMenuItems: MenuItem[] = [
     description: 'Twelve-hour tender lamb, bone marrow jus, velvety pomme purée, and glazed seasonal root vegetables.',
     price: 'Rs 3,450',
     isSignature: true,
+    image: '/images/culinary_mountain_dish_1790368127851.webp',
   },
   {
     id: 'main-2',
@@ -72,6 +74,7 @@ export const sampleMenuItems: MenuItem[] = [
     description: 'Crispy skin fresh catch, brown butter almond reduction, charred lemon, and baby asparagus.',
     price: 'Rs 2,950',
     dietary: ['Gluten-Free'],
+    image: '/images/mountain_trout_1790370393281.webp',
   },
   {
     id: 'main-3',
@@ -81,6 +84,7 @@ export const sampleMenuItems: MenuItem[] = [
     description: 'Prime cut grilled over cedar charcoal, roasted garlic herb butter, and triple-cooked mountain wedges.',
     price: 'Rs 3,850',
     isSignature: true,
+    image: '/images/culinary_mountain_dish_1790368127851.webp',
   },
   {
     id: 'main-4',
@@ -176,5 +180,6 @@ export const sampleMenuItems: MenuItem[] = [
     categoryLabel: 'Beverages & Warm Infusions',
     description: 'Freshly roasted specialty beans brewed by the cup with notes of dark chocolate and dried stone fruit.',
     price: 'Rs 720',
+    image: '/images/mountain_coffee_1790370377559.webp',
   },
 ];

@@ -157,6 +157,7 @@ export const Admin: React.FC = () => {
       window.removeEventListener('the_grey_menu_updated', handleMenu as EventListener);
       window.removeEventListener('the_grey_gallery_updated', handleGallery as EventListener);
       window.removeEventListener('the_grey_reservations_updated', handleRes as EventListener);
+      logout();
     };
   }, []);
 

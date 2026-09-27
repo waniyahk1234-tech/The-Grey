@@ -43,8 +43,11 @@ export const Home: React.FC = () => {
         {/* Background Image with Dark Vignette & Atmospheric Fog Overlay */}
         <div className="absolute inset-0 z-0 select-none pointer-events-none">
           <img
-            src="/src/assets/images/hero_mountain_lodge_1790368092107.jpg"
+            src="/images/hero_mountain_lodge_1790368092107.webp"
             alt="The Grey restaurant lodge in misty pine hills of Nathia Gali"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
             className="w-full h-full object-cover object-center scale-105 transition-transform duration-1000 ease-out"
           />
           {/* Subtle gradient scrim for readability and depth */}
@@ -132,9 +135,10 @@ export const Home: React.FC = () => {
           <div className="lg:col-span-7">
             <div className="relative group overflow-hidden border border-white/5">
               <SafeImage
-                src="/src/assets/images/dining_warm_interior_1790368111714.jpg"
+                src="/images/dining_warm_interior_1790368111714.webp"
                 alt="Intimate dining room inside The Grey with mountain view"
                 aspectClass="aspect-[16/10]"
+                priority={true}
                 className="transform group-hover:scale-102 transition-transform duration-700 ease-out"
               />
             </div>
@@ -244,6 +248,16 @@ export const Home: React.FC = () => {
               className="p-6 bg-[#14161A]/80 border border-white/5 hover:border-white/10 transition-colors flex flex-col justify-between"
             >
               <div>
+                {item.image && (
+                  <div className="mb-4 overflow-hidden border border-white/5">
+                    <SafeImage
+                      src={item.image}
+                      alt={item.name}
+                      aspectClass="aspect-[16/9]"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                )}
                 <div className="flex items-baseline justify-between gap-4 mb-2">
                   <h3 className="font-serif text-xl sm:text-2xl text-[#F5F3EF]">
                     {item.name}
@@ -294,7 +308,7 @@ export const Home: React.FC = () => {
             <div className="lg:col-span-7 relative">
               <div className="border border-white/10 shadow-2xl overflow-hidden">
                 <SafeImage
-                  src="/lodge_exterior_mist_1790368141854.jpg"
+                  src="/images/lodge_exterior_mist_1790368141854.webp"
                   alt="A-frame pavilion of The Grey in thick mountain fog"
                   aspectClass="aspect-[16/10]"
                   className="w-full h-full object-cover"
@@ -420,7 +434,7 @@ export const Home: React.FC = () => {
             <div className="lg:col-span-6">
               <div className="relative border border-white/10 overflow-hidden shadow-2xl">
                 <SafeImage
-                  src="./assests/images/culinary_mountain_dish_1790368127851.jpg"
+                  src="/images/culinary_mountain_dish_1790368127851.webp"
                   alt="Culinary presentation at The Grey with wild mountain mushrooms"
                   aspectClass="aspect-[4/3]"
                   className="w-full h-full object-cover"
@@ -562,8 +576,10 @@ export const Home: React.FC = () => {
       <section className="relative py-32 px-6 sm:px-8 lg:px-12 text-center bg-[#0C0D0F] border-t border-white/5 overflow-hidden">
         <div className="absolute inset-0 opacity-20 pointer-events-none select-none">
           <img
-            src="/hero_mountain_lodge_1790368092107.jpg"
+            src="/images/hero_mountain_lodge_1790368092107.webp"
             alt="The Grey background"
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover filter blur-sm scale-105"
           />
           <div className="absolute inset-0 bg-[#0C0D0F]/90" />

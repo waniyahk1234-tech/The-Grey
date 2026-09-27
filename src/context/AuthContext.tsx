@@ -16,6 +16,10 @@ const VALID_PASSCODES: Record<string, string> = {
   thegrey: 'Host Desk',
   nathia: 'Nathia Gali Operations',
   admin123: 'Duty Manager',
+  admin: 'Administrator',
+  thegrey123: 'Staff Portal',
+  thegreypk: 'The Grey Operations',
+  thegrey2026: 'Executive Management',
 };
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {

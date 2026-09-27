@@ -9,7 +9,19 @@ export function getLiveGalleryItems(): GalleryItem[] {
     if (stored) {
       const parsed = JSON.parse(stored);
       if (Array.isArray(parsed) && parsed.length > 0) {
-        return parsed;
+        return parsed.map((item: GalleryItem) => {
+          let s = item.src || '';
+          if (s.startsWith('/src/assets/images/')) {
+            s = s.replace(/^\/src\/assets\/images\//, '/images/');
+          }
+          if (s.endsWith('.jpg') && s.startsWith('/images/')) {
+            s = s.replace(/\.jpg$/, '.webp');
+          }
+          return {
+            ...item,
+            src: s,
+          };
+        });
       }
     }
   } catch (e) {
