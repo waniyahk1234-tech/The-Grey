@@ -420,7 +420,7 @@ export const Home: React.FC = () => {
             <div className="lg:col-span-6">
               <div className="relative border border-white/10 overflow-hidden shadow-2xl">
                 <SafeImage
-                  src="/culinary_mountain_dish_1790368127851.jpg"
+                  src="./assests/images/culinary_mountain_dish_1790368127851.jpg"
                   alt="Culinary presentation at The Grey with wild mountain mushrooms"
                   aspectClass="aspect-[4/3]"
                   className="w-full h-full object-cover"
